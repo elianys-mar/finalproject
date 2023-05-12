@@ -1,0 +1,37 @@
+{% extends "bootstrap/base.html" %}
+	
+{% block content %}
+<!doctype html>
+<html>
+  <head>
+    <title>Welcome to Our Classroom Page!</title>
+  </head>
+  <body>
+    <h1 class="text-center my-5" style="color:purple;">Classroom Information</h1>
+	<table class="table  table.striped table.bordered">
+	<thread class="bg.success">
+	<tr style="color:red;"> 
+	  <td>RoomNum</td>
+	  <td>Grade</td>
+	  <td>TeacherName</td>
+	  <td>NumStudents</td>
+	  <td>AvgGrade</td>
+	</thread>
+
+	{% for row in rows %}
+	<tr class="bg-info">
+		<td>{{row[0]}}</td>
+		<td>{{row[1]}}</td>
+		<td>{{row[2]}}</td>
+		<td>{{row[3]}}</td>
+		<td>{{row[4]}}</td>
+	</tr>
+	{% endfor %}
+   
+	
+ 	</table>
+ 	<h4> <button> <a href="/">Main Page</a> </h4>
+	{% endblock %}
+	
+  </body>
+</htm>
